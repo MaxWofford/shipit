@@ -1,4 +1,5 @@
 // Initialize Firebase
+
 var config = {
     apiKey: "AIzaSyD-IT1RWXi-7bMSjtTsPmpaTD2SXadFxC0",
     authDomain: "shipit-7427d.firebaseapp.com",
@@ -109,7 +110,8 @@ $(function () {
             window.location.replace("/?action=launch");
         });
     } else {
-        query.limitToLast(10).on("child_added", function (snapshot) {
+        query.limitToLast(5).on("child_added", function (snapshot) {
+            console.log("asd")
             if (!firstKnownKey) {
               firstKnownKey = snapshot.key;
             }

@@ -111,7 +111,7 @@ $(function () {
         });
     } else {
         query.limitToLast(5).on("child_added", function (snapshot) {
-            console.log("asd")
+            
             if (!firstKnownKey) {
               firstKnownKey = snapshot.key;
             }
@@ -167,7 +167,7 @@ function createProject() {
                 completed = false;
             }
         }
-        if (!$("#" + inputs[5]).val()) {
+        if ($("#" + inputs[5]).val()) {
             completed = false;
         }
         if (!checkIfValidURL($("#" + inputs[3]).val())) {
